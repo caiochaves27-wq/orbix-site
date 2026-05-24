@@ -90,7 +90,7 @@ export function OrbixNav() {
             className="absolute inset-0 bg-navy-deep/20"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <aside className="relative ml-3 mt-3 max-h-[calc(100svh-1.5rem)] w-[min(72vw,280px)] overflow-y-auto rounded-[1.25rem] border border-gold/25 bg-navy-deep/98 px-3.5 py-3.5 text-white shadow-premium">
+          <aside className="relative ml-3 mt-3 max-h-[calc(100svh-1.5rem)] w-[min(62vw,240px)] overflow-y-auto rounded-[1.1rem] border border-gold/25 bg-navy-deep/98 px-3 py-3 text-white shadow-premium">
             <div className="flex items-center justify-between gap-4">
               <a
                 href="/#top"
@@ -111,30 +111,30 @@ export function OrbixNav() {
               </button>
             </div>
 
-            <nav className="mt-4 grid gap-1.5 text-sm font-bold">
+            <nav className="mt-3.5 grid gap-1.5 text-xs font-bold">
               {links.map(([label, href]) => (
                 <a
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-left text-white/82 transition hover:border-gold/55 hover:text-gold"
+                  className="rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1.5 text-left text-white/82 transition hover:border-gold/55 hover:text-gold"
                 >
                   {label}
                 </a>
               ))}
             </nav>
 
-            <div className="mt-4 grid gap-2">
+            <div className="mt-3.5 grid gap-1.5">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/65 px-3 py-2 text-[11px] font-extrabold uppercase tracking-[0.1em] text-gold transition hover:bg-gold hover:text-navy-deep"
+                className="inline-flex items-center justify-center gap-1.5 rounded-full border border-gold/65 px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.1em] text-gold transition hover:bg-gold hover:text-navy-deep"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
               </a>
-              <div className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/35 bg-white/95 px-2.5 py-1.5 text-[8px] font-bold uppercase text-navy">
+              <div className="inline-flex items-center justify-center gap-1.5 rounded-full border border-gold/35 bg-white/95 px-2 py-1 text-[8px] font-bold uppercase text-navy">
                 <BadgeCheck className="h-3 w-3 text-gold" />
                 <span>Autorizado</span>
                 <span className="h-4 w-px bg-navy/15" />
