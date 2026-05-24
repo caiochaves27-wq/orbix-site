@@ -116,7 +116,7 @@ function CareersPage() {
     <main className="min-h-screen bg-ice text-ink">
       <OrbixNav />
 
-      <section className="mx-auto max-w-7xl px-5 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36">
+      <section className="mx-auto max-w-7xl overflow-hidden px-4 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <div className="eyebrow">Carreiras Orbix</div>
@@ -146,13 +146,13 @@ function CareersPage() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mx-auto mt-10 grid w-full max-w-md justify-items-center gap-4 md:max-w-none md:grid-cols-2 xl:grid-cols-5">
           {jobs.map((job) => (
             <button
               key={`${job.title}-${job.location}`}
               type="button"
               onClick={() => setSelectedJob(`${job.title} - ${job.location}`)}
-              className="interactive-card surface-card rounded-[1.25rem] p-5 text-left"
+              className="interactive-card surface-card w-full max-w-sm rounded-[1.25rem] p-5 text-left md:max-w-none"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold">
                 <BriefcaseBusiness className="h-5 w-5" />
@@ -163,13 +163,13 @@ function CareersPage() {
               <h2 className="mt-2 font-display text-lg text-ink">{job.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-steel">{job.description}</p>
               <div className="mt-4 space-y-2 text-sm font-semibold text-steel">
-                <div className="flex items-center gap-2">
+                <div className="flex min-w-0 items-center gap-2">
                   <MapPin className="h-4 w-4 text-gold" />
-                  {job.location}
+                  <span className="min-w-0 break-words">{job.location}</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex min-w-0 items-center gap-2">
                   <Building2 className="h-4 w-4 text-gold" />
-                  {job.area}
+                  <span className="min-w-0 break-words">{job.area}</span>
                 </div>
                 <div className="inline-flex rounded-full border border-gold/25 px-3 py-1 text-[11px] uppercase text-navy">
                   {job.type}
