@@ -908,52 +908,40 @@ function Footer() {
         </div>
         <div className="md:col-span-2">
           <div className="text-[11px] font-bold uppercase text-gold">Unidades</div>
-          <div className="mt-4 space-y-3 text-sm text-white/68">
+          <div className="mt-4 space-y-2 text-sm font-semibold text-white/68">
             <div>
-              <div className="font-bold text-white">Matriz</div>
-              <div>Ribeirão Preto, SP</div>
+              <span className="font-bold text-white">Matriz</span> - Ribeirão Preto/SP
             </div>
             <div>
-              <div className="font-bold text-white">Unidade</div>
-              <div>São Paulo Capital</div>
-            </div>
-            <div>
-              <div className="font-bold text-white">Atuação</div>
-              <div>Nível nacional</div>
+              <span className="font-bold text-white">Filial</span> - São Paulo/SP
             </div>
           </div>
         </div>
         <div className="md:col-span-3">
           <div className="text-[11px] font-bold uppercase text-gold">Canais oficiais</div>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 space-y-3 text-sm font-semibold text-white/72">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-bold text-white hover:border-gold hover:text-gold"
+              className="flex items-center gap-3 transition hover:text-gold"
             >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
+              <MessageCircle className="h-4 w-4 text-gold" /> {PHONE_LABEL}
             </a>
             <a
               href={`mailto:${EMAIL}`}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-bold text-white hover:border-gold hover:text-gold"
+              className="flex items-center gap-3 transition hover:text-gold"
             >
-              <Mail className="h-4 w-4" /> E-mail
+              <Mail className="h-4 w-4 text-gold" /> {EMAIL}
             </a>
             <a
               href="https://www.instagram.com/sou.orbix"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-bold text-white hover:border-gold hover:text-gold"
+              className="flex items-center gap-3 transition hover:text-gold"
             >
-              <Instagram className="h-4 w-4" /> Instagram
+              <Instagram className="h-4 w-4 text-gold" /> {INSTAGRAM}
             </a>
-          </div>
-          <div className="mt-5 space-y-1 text-sm text-white/64">
-            <div>{EMAIL}</div>
-            <div>{PHONE_LABEL}</div>
-            <div>{DOMAIN}</div>
-            <div>{INSTAGRAM}</div>
           </div>
         </div>
       </div>
