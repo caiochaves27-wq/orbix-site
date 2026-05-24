@@ -220,7 +220,7 @@ function Simulator() {
 
   return (
     <section id="simulador" className="relative overflow-hidden bg-paper py-20 sm:py-28">
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-paper to-transparent" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionIntro
           eyebrow="Simulador Orbix"
@@ -233,8 +233,8 @@ function Simulator() {
         />
         <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase text-navy shadow-quiet">
           <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-45" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-online opacity-45" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-online" />
           </span>
           Simulação disponível agora
         </div>
@@ -645,7 +645,7 @@ function CaixaPresence() {
   return (
     <section
       id="caixa"
-      className="bg-[linear-gradient(180deg,var(--paper-2)_0%,#fff_48%,var(--paper-2)_100%)] py-20 sm:py-28"
+      className="bg-[linear-gradient(180deg,var(--paper-2)_0%,var(--paper)_48%,var(--paper-2)_100%)] py-20 sm:py-28"
     >
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-5">

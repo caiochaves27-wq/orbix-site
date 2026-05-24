@@ -50,16 +50,17 @@
 :root {
   --radius: 1rem;
 
-  /* Marca: navy profundo + dourado discreto, branco gelo predominante */
+  /* Marca: navy profundo + dourado discreto, azul-gelo predominante */
   --ink: #223144;
-  --paper: oklch(0.995 0.003 240);
-  --paper-2: oklch(0.975 0.006 240);
+  --paper: #eef5fb;
+  --paper-2: #e5eef7;
   --navy: #223144; /* azul institucional da marca */
   --navy-soft: oklch(0.93 0.018 250);
   --navy-deep: #17283a;
   --steel: oklch(0.55 0.018 250); /* azul acinzentado moderno */
   --gold: #b39756; /* dourado da marca */
   --gold-soft: oklch(0.92 0.05 82);
+  --online: #16a34a;
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -139,6 +140,9 @@
   .bg-gold {
     background-color: var(--gold);
   }
+  .bg-online {
+    background-color: var(--online);
+  }
   .bg-paper {
     background-color: var(--paper);
   }
@@ -177,7 +181,7 @@
         color-mix(in oklab, var(--gold) 8%, transparent) 0%,
         transparent 60%
       ),
-      linear-gradient(180deg, #ffffff 0%, var(--paper-2) 100%);
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
   }
   .bg-navy-aurora {
     background:
@@ -263,7 +267,7 @@
   .surface-card {
     background: linear-gradient(
       180deg,
-      #ffffff 0%,
+      color-mix(in oklab, var(--paper) 82%, white) 0%,
       color-mix(in oklab, var(--paper-2) 60%, white) 100%
     );
     border: 1px solid color-mix(in oklab, var(--navy) 8%, transparent);
