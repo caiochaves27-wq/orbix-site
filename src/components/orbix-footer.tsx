@@ -28,9 +28,9 @@ export function OrbixFooter() {
           </div>
         </div>
 
-        <div className="md:col-span-2">
+        <div className="md:col-span-3">
           <div className="text-[11px] font-bold uppercase text-gold">Navegação</div>
-          <ul className="mt-4 space-y-2 text-sm font-semibold text-white/64">
+          <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm font-semibold text-white/64">
             <li>
               <a href="/#top" className="hover:text-gold">
                 Home
