@@ -1,15 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, BadgeCheck, FileCheck2, Home, Landmark, Scale } from "lucide-react";
+import { OrbixFooter } from "@/components/orbix-footer";
 import { OrbixNav } from "@/components/orbix-nav";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog Orbix | Crédito imobiliário, Caixa e Minha Casa Minha Vida" },
+      { title: "Blog/FAQ Orbix | Crédito imobiliário, Caixa e Minha Casa Minha Vida" },
       {
         name: "description",
         content:
-          "Guias práticos sobre financiamento imobiliário, Minha Casa Minha Vida, SBPE, consórcio e esteira de crédito.",
+          "Guias práticos e perguntas frequentes sobre financiamento imobiliário, Minha Casa Minha Vida, SBPE, consórcio e esteira de crédito.",
       },
     ],
   }),
@@ -21,11 +22,11 @@ const posts = [
     icon: <Home />,
     title: "Minha Casa Minha Vida: o que observar antes de simular",
     summary:
-      "Renda, tipo de imóvel, documentação e localização impactam enquadramento, taxas e condições.",
+      "Renda, tipo de imóvel, documentação e localização impactam enquadramento, taxas, subsídio e condições.",
     points: [
-      "A CAIXA informa que o programa considera renda familiar, localização do imóvel e regras oficiais.",
-      "O programa urbano atende famílias com renda mensal bruta de até R$ 13 mil, conforme canais oficiais.",
-      "A análise final depende da instituição financeira e da documentação do comprador e do imóvel.",
+      "A análise considera renda familiar, localização do imóvel e regras vigentes.",
+      "O enquadramento muda conforme perfil, faixa de renda, imóvel e documentação.",
+      "A Orbix ajuda a organizar a jornada antes de a proposta avançar.",
     ],
   },
   {
@@ -35,25 +36,25 @@ const posts = [
       "Para imóveis e perfis fora do MCMV, a simulação precisa olhar renda, prazo, entrada e risco documental.",
     points: [
       "A simulação é ponto de partida, não aprovação.",
-      "Documentos incompletos travam a jornada e geram retrabalho para comprador, parceiro e imobiliária.",
-      "A Orbix ajuda a transformar interesse em uma rota operacional clara.",
+      "Documentos incompletos geram retrabalho e atrasam a jornada.",
+      "A esteira Orbix dá clareza para comprador, parceiro e imobiliária.",
     ],
   },
   {
     icon: <FileCheck2 />,
-    title: "Esteira de crédito: por que financiamento travado quase sempre é falta de processo",
+    title: "Esteira de crédito: por que financiamento precisa de processo",
     summary: "Sem esteira, o financiamento vira conversa solta, arquivo perdido e retorno manual.",
     points: [
-      "Pré-análise evita que o cliente avance sem uma rota clara.",
+      "Pré-análise evita avanço sem rota clara.",
       "Conferência documental reduz pendências recorrentes.",
-      "Acompanhamento melhora previsibilidade para clientes, parceiros e gestores.",
+      "Acompanhamento melhora previsibilidade até a assinatura.",
     ],
   },
   {
     icon: <Scale />,
     title: "Consórcio imobiliário: compra planejada e estratégia de lance",
     summary:
-      "Pode ser alternativa para quem aceita prazo e quer comprar sem juros tradicionais de financiamento.",
+      "Pode ser alternativa para quem aceita planejamento e quer comprar sem juros tradicionais de financiamento.",
     points: [
       "A contemplação pode ocorrer por sorteio ou lance, conforme regras do grupo.",
       "Taxa de administração e custos do grupo precisam entrar na conta.",
@@ -63,27 +64,86 @@ const posts = [
 ];
 
 const faq = [
-  [
-    "A Orbix substitui a análise da Caixa?",
-    "Não. A Orbix organiza a jornada; a aprovação é oficial.",
-  ],
-  [
-    "O simulador garante taxa ou aprovação?",
-    "Não. Ele mostra estimativa inicial para orientar a conversa.",
-  ],
-  ["A Orbix atende MCMV?", "Sim, com leitura de renda, enquadramento e documentação."],
-  [
-    "A Orbix atende SBPE?",
-    "Sim, especialmente quando a operação exige mais organização e previsibilidade.",
-  ],
-  [
-    "Consórcio tem juros?",
-    "Não há juros de financiamento, mas há taxa de administração e custos do grupo.",
-  ],
-  [
-    "Clientes e parceiros podem acompanhar processos?",
-    "Sim. A proposta do app é dar visibilidade à esteira e pendências.",
-  ],
+  {
+    group: "Financiamento",
+    items: [
+      [
+        "A Orbix aprova crédito?",
+        "Não. A aprovação é oficial da instituição financeira. A Orbix organiza a jornada, orienta documentos e acompanha as etapas para dar mais clareza ao processo.",
+      ],
+      [
+        "O simulador garante taxa ou aprovação?",
+        "Não. Ele apresenta uma estimativa inicial. Taxa, prazo, valor aprovado e condições dependem da análise oficial.",
+      ],
+      [
+        "A Orbix atende Minha Casa Minha Vida?",
+        "Sim. Ajudamos na leitura de renda, enquadramento, possibilidade de subsídio, documentação e próximos passos.",
+      ],
+      [
+        "A Orbix atende SBPE?",
+        "Sim. O SBPE exige leitura cuidadosa de renda, entrada, prazo, valor do imóvel e documentação.",
+      ],
+    ],
+  },
+  {
+    group: "Renda e documentação",
+    items: [
+      [
+        "Autônomo consegue financiar imóvel?",
+        "Pode conseguir. A renda pode ser analisada por declaração de Imposto de Renda, extratos, movimentação bancária e outros comprovantes aceitos na análise.",
+      ],
+      [
+        "MEI ou empresário pode comprovar renda?",
+        "Pode. Normalmente a documentação envolve Imposto de Renda, pró-labore, extratos, faturamento, contrato social ou documentos equivalentes.",
+      ],
+      [
+        "Posso usar FGTS no financiamento?",
+        "Em muitos casos sim, desde que comprador, imóvel e operação atendam às regras vigentes. A análise precisa ser feita caso a caso.",
+      ],
+      [
+        "Quais documentos costumam ser analisados?",
+        "Documentos pessoais, comprovantes de renda, estado civil, documentação do imóvel e informações exigidas pela instituição financeira.",
+      ],
+    ],
+  },
+  {
+    group: "Consórcio",
+    items: [
+      [
+        "Ter restrição impede comprar consórcio?",
+        "Para entrar em um grupo, a restrição pode não ser o mesmo impeditivo de um financiamento. Porém, na contemplação e uso da carta, pode haver análise cadastral e documental.",
+      ],
+      [
+        "Consórcio imobiliário tem juros?",
+        "Não há juros de financiamento, mas existem taxa de administração, fundo comum, fundo de reserva quando previsto e demais custos do grupo.",
+      ],
+      [
+        "Como funciona o lance no consórcio?",
+        "O lance é uma oferta para tentar antecipar a contemplação. A estratégia depende do grupo, saldo, regras de assembleia e objetivo de compra.",
+      ],
+      [
+        "A Orbix acompanha pós-lance?",
+        "Sim. Ajudamos a organizar documentação, uso da carta de crédito e próximos passos até a compra do imóvel.",
+      ],
+    ],
+  },
+  {
+    group: "Acompanhamento",
+    items: [
+      [
+        "Clientes conseguem acompanhar o processo?",
+        "Sim. A proposta do app é dar visibilidade à esteira, documentos, pendências e evolução do processo.",
+      ],
+      [
+        "A Orbix atende comprador final?",
+        "Sim. A Orbix atende compradores, investidores, imobiliárias, construtoras e parceiros.",
+      ],
+      [
+        "A Orbix atende em nível nacional?",
+        "Sim. A atuação é nacional, com matriz em Ribeirão Preto/SP e filial em São Paulo/SP.",
+      ],
+    ],
+  },
 ];
 
 const sources = [
@@ -109,12 +169,13 @@ function BlogPage() {
 
       <section className="mx-auto max-w-7xl px-5 pb-16 pt-32 sm:px-8 sm:pb-24 sm:pt-40">
         <div className="max-w-3xl">
-          <div className="eyebrow">Blog Orbix</div>
+          <div className="eyebrow">Blog/FAQ Orbix</div>
           <h1 className="mt-3 text-4xl sm:text-6xl">
-            Conteúdo para decidir melhor e vender com mais previsibilidade.
+            Conteúdo para decidir melhor e financiar com mais clareza.
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-steel">
-            Guias práticos para compradores, investidores, imobiliárias, construtoras e parceiros.
+            Guias práticos e respostas objetivas para compradores, investidores, imobiliárias,
+            construtoras e parceiros.
           </p>
         </div>
 
@@ -142,15 +203,32 @@ function BlogPage() {
         </div>
 
         <section className="mt-16 rounded-[2rem] bg-navy p-6 text-white shadow-premium sm:p-8">
-          <h2 className="font-display text-3xl">FAQ completo</h2>
-          <div className="mt-6 grid gap-3 md:grid-cols-2">
-            {faq.map(([question, answer]) => (
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <div className="text-[11px] font-bold uppercase text-gold">FAQ Orbix</div>
+              <h2 className="mt-2 font-display text-3xl">Perguntas frequentes</h2>
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-white/60">
+              Respostas diretas para as dúvidas que mais aparecem antes de simular, financiar ou
+              planejar uma compra por consórcio.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+            {faq.map((section) => (
               <div
-                key={question}
-                className="rounded-2xl border border-white/10 bg-white/[0.06] p-4"
+                key={section.group}
+                className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"
               >
-                <h3 className="font-display text-xl">{question}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/68">{answer}</p>
+                <h3 className="font-display text-2xl text-gold">{section.group}</h3>
+                <div className="mt-4 space-y-3">
+                  {section.items.map(([question, answer]) => (
+                    <div key={question} className="rounded-2xl bg-white/[0.06] p-4">
+                      <h4 className="font-display text-lg">{question}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-white/68">{answer}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -173,6 +251,8 @@ function BlogPage() {
           </div>
         </section>
       </section>
+
+      <OrbixFooter />
     </main>
   );
 }

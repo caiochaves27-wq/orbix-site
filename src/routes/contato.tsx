@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Building2, Instagram, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { FormEvent } from "react";
+import { OrbixFooter } from "@/components/orbix-footer";
 import { OrbixNav } from "@/components/orbix-nav";
 
 export const Route = createFileRoute("/contato")({
@@ -60,20 +61,27 @@ function ContactPage() {
             rota de crédito e avançar com mais segurança.
           </p>
 
-          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+          <div className="mt-7 grid gap-3 sm:grid-cols-3">
             <div className="rounded-2xl border border-gold/25 bg-white p-4 shadow-quiet">
               <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-gold">
                 <MapPin className="h-4 w-4" />
                 Matriz
               </div>
-              <div className="mt-1 font-display text-xl text-navy">Ribeirão Preto, SP</div>
+              <div className="mt-1 font-display text-xl text-navy">Ribeirão Preto/SP</div>
             </div>
             <div className="rounded-2xl border border-gold/25 bg-white p-4 shadow-quiet">
               <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-gold">
                 <Building2 className="h-4 w-4" />
-                Unidade
+                Filial
               </div>
-              <div className="mt-1 font-display text-xl text-navy">São Paulo Capital</div>
+              <div className="mt-1 font-display text-xl text-navy">São Paulo/SP</div>
+            </div>
+            <div className="rounded-2xl border border-gold/25 bg-white p-4 shadow-quiet">
+              <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-gold">
+                <MapPin className="h-4 w-4" />
+                Atuação
+              </div>
+              <div className="mt-1 font-display text-xl text-navy">Nível nacional</div>
             </div>
           </div>
 
@@ -178,6 +186,7 @@ function ContactPage() {
           </div>
         </form>
       </section>
+      <OrbixFooter />
     </main>
   );
 }
