@@ -28,6 +28,7 @@ export const Route = createFileRoute("/vagas")({
 });
 
 const RH_EMAIL = "rh@souorbix.com.br";
+const PUBLISHED_AT = "26/05/26";
 
 const jobs = [
   {
@@ -156,7 +157,10 @@ function CareersPage() {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold">
                 <BriefcaseBusiness className="h-5 w-5" />
               </div>
-              <h2 className="mt-5 font-display text-lg text-ink">{job.title}</h2>
+              <div className="mt-4 text-[10px] font-bold uppercase text-steel/70">
+                Publicada em {PUBLISHED_AT}
+              </div>
+              <h2 className="mt-2 font-display text-lg text-ink">{job.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-steel">{job.description}</p>
               <div className="mt-4 space-y-2 text-sm font-semibold text-steel">
                 <div className="flex items-center gap-2">
