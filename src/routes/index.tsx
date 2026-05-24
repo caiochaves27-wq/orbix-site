@@ -752,6 +752,26 @@ function BrokerApp() {
               className="rounded-[1.8rem]"
             />
           </div>
+          <a
+            href="https://obx-bpo.com.br"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Acessar site da OBX BPO"
+            className="mx-auto mt-5 flex w-full max-w-[280px] items-center justify-between rounded-2xl border border-white/10 bg-white/[0.07] px-4 py-3 text-white shadow-quiet transition hover:border-gold/60 hover:bg-white/[0.1]"
+          >
+            <span className="flex items-center gap-3">
+              <span className="grid h-10 w-10 place-items-center rounded-xl border border-gold/35 bg-navy text-[10px] font-black uppercase tracking-[0.12em] text-gold">
+                OBX
+              </span>
+              <span>
+                <span className="block font-display text-lg leading-none text-white">OBX BPO</span>
+                <span className="mt-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-gold/85">
+                  Tecnologia operacional
+                </span>
+              </span>
+            </span>
+            <ArrowRight className="h-4 w-4 shrink-0 text-gold" />
+          </a>
         </div>
       </div>
     </section>
