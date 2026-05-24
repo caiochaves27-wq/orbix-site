@@ -179,10 +179,10 @@ function CareersPage() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-12">
+        <div className="mx-auto mt-10 grid w-full max-w-md gap-8 md:max-w-none lg:grid-cols-12">
           <form
             onSubmit={handleSubmit}
-            className="surface-card rounded-[1.5rem] p-5 shadow-premium sm:p-7 lg:col-span-8"
+            className="surface-card min-w-0 rounded-[1.25rem] p-4 shadow-premium sm:rounded-[1.5rem] sm:p-7 lg:col-span-8"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold">
@@ -195,13 +195,13 @@ function CareersPage() {
             </div>
 
             <div className="mt-6 grid gap-5">
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid min-w-0 gap-4 sm:grid-cols-2 sm:gap-5">
                 <label className="grid gap-2">
                   <span className="text-sm font-bold text-steel">Nome completo</span>
                   <input
                     name="name"
                     required
-                    className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
+                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="Seu nome"
                   />
                 </label>
@@ -211,20 +211,20 @@ function CareersPage() {
                     name="phone"
                     type="tel"
                     required
-                    className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
+                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="(00) 00000-0000"
                   />
                 </label>
               </div>
 
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid min-w-0 gap-4 sm:grid-cols-2 sm:gap-5">
                 <label className="grid gap-2">
                   <span className="text-sm font-bold text-steel">E-mail</span>
                   <input
                     name="email"
                     type="email"
                     required
-                    className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
+                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="voce@email.com"
                   />
                 </label>
@@ -233,7 +233,7 @@ function CareersPage() {
                   <input
                     name="city"
                     required
-                    className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
+                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="São Paulo/SP"
                   />
                 </label>
@@ -245,7 +245,7 @@ function CareersPage() {
                   name="job"
                   value={selectedJob}
                   onChange={(event) => setSelectedJob(event.target.value)}
-                  className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
+                  className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
                 >
                   {jobs.map((job) => (
                     <option key={`${job.title}-select-${job.location}`}>
@@ -260,19 +260,21 @@ function CareersPage() {
                 <span className="text-sm font-bold text-steel">{"LinkedIn ou portf\u00f3lio"}</span>
                 <input
                   name="linkedin"
-                  className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
+                  className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
                   placeholder="https://..."
                 />
               </label>
 
               <label className="grid gap-2">
                 <span className="text-sm font-bold text-steel">{"Curr\u00edculo"}</span>
-                <span className="flex cursor-pointer items-center justify-between gap-3 rounded-2xl border border-dashed border-gold/45 bg-white px-4 py-4 text-sm font-bold text-navy transition hover:border-gold">
-                  <span className="flex items-center gap-2">
+                <span className="flex min-w-0 cursor-pointer items-center justify-between gap-3 rounded-2xl border border-dashed border-gold/45 bg-white px-3.5 py-4 text-sm font-bold text-navy transition hover:border-gold sm:px-4">
+                  <span className="flex min-w-0 items-center gap-2">
                     <FileUp className="h-4 w-4 text-gold" />
-                    {fileName || "Anexar curr\u00edculo em PDF, DOC ou DOCX"}
+                    <span className="min-w-0 break-words">
+                      {fileName || "Anexar curr\u00edculo em PDF, DOC ou DOCX"}
+                    </span>
                   </span>
-                  <ArrowRight className="h-4 w-4 text-gold" />
+                  <ArrowRight className="h-4 w-4 shrink-0 text-gold" />
                   <input
                     name="resume"
                     type="file"
@@ -288,7 +290,7 @@ function CareersPage() {
                 <textarea
                   name="message"
                   rows={4}
-                  className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
+                  className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
                   placeholder="Conte brevemente sua experiência."
                 />
               </label>
@@ -302,7 +304,7 @@ function CareersPage() {
             </div>
           </form>
 
-          <aside className="rounded-[1.5rem] bg-navy p-5 text-white shadow-premium sm:p-7 lg:col-span-4">
+          <aside className="min-w-0 rounded-[1.25rem] bg-navy p-4 text-white shadow-premium sm:rounded-[1.5rem] sm:p-7 lg:col-span-4">
             <div className="text-[11px] font-bold uppercase text-gold">Perfil Orbix</div>
             <h2 className="mt-3 font-display text-2xl">
               {"Organiza\u00e7\u00e3o, atendimento e ritmo."}
