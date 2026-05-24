@@ -72,12 +72,12 @@ export function OrbixNav() {
           </a>
         </div>
       </div>
-      <div className="pointer-events-none mx-auto mt-2 flex max-w-7xl justify-center sm:mt-3 sm:justify-end sm:pr-4">
-        <div className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-gold/35 bg-white/96 px-3 py-1 text-[9px] font-bold uppercase text-navy shadow-premium backdrop-blur-md sm:gap-2.5 sm:px-4 sm:py-2 sm:text-[10px]">
-          <BadgeCheck className="h-3 w-3 text-gold sm:h-3.5 sm:w-3.5" />
+      <div className="pointer-events-none mx-auto mt-2 flex max-w-7xl justify-center xl:mt-3 xl:justify-end xl:pr-4">
+        <div className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-gold/35 bg-white/96 px-3 py-1 text-[9px] font-bold uppercase text-navy shadow-premium backdrop-blur-md xl:gap-2.5 xl:px-4 xl:py-2 xl:text-[10px]">
+          <BadgeCheck className="h-3 w-3 text-gold xl:h-3.5 xl:w-3.5" />
           <span>Autorizado</span>
-          <span className="h-4 w-px bg-navy/15 sm:h-5" />
-          <img src={caixaLogo} alt="Caixa" className="h-5 w-auto sm:h-7" />
+          <span className="h-4 w-px bg-navy/15 xl:h-5" />
+          <img src={caixaLogo} alt="Caixa" className="h-5 w-auto xl:h-7" />
         </div>
       </div>
 
