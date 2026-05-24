@@ -952,9 +952,24 @@ function Footer() {
           dependem de análise oficial, documentação, regras vigentes e aprovação da instituição
           financeira.
         </div>
-        <div className="mt-4 text-[11px] font-bold uppercase tracking-[0.18em] text-gold">
-          Tecnologia OBX BPO
-        </div>
+        <a
+          href="https://obx-bpo.com.br"
+          target="_blank"
+          rel="noreferrer"
+          className="mx-auto mt-5 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-white/62 transition hover:border-gold/50 hover:text-white"
+          aria-label="Homologado OBX BPO"
+        >
+          <span>Homologado</span>
+          <span className="h-5 w-px bg-white/12" />
+          <span className="inline-flex items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#e2c56f] to-[#9c7b2f] text-sm font-extrabold tracking-0 text-navy-deep shadow-gold-glow">
+              O
+            </span>
+            <span className="text-base font-extrabold tracking-0 text-white">
+              OBX <span className="text-gold">BPO</span>
+            </span>
+          </span>
+        </a>
       </div>
     </footer>
   );
