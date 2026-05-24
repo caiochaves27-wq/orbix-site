@@ -70,25 +70,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Orbix | Crédito imobiliário com inteligência" },
+      { name: "robots", content: "index, follow" },
+      { title: "Orbix | Cr\u00e9dito imobili\u00e1rio Caixa" },
       {
         name: "description",
         content:
-          "Orbix conduz crédito imobiliário com tecnologia, estratégia bancária e atendimento especializado.",
+          "Orbix conduz cr\u00e9dito imobili\u00e1rio Caixa, Minha Casa Minha Vida e SBPE com atendimento especializado, tecnologia e esteira de aprova\u00e7\u00e3o.",
       },
       { name: "author", content: "Orbix" },
-      { property: "og:title", content: "Orbix | Crédito imobiliário inteligente" },
+      { property: "og:title", content: "Orbix | Cr\u00e9dito imobili\u00e1rio Caixa" },
       {
         property: "og:description",
         content:
-          "Simule e conduza seu financiamento imobiliário com uma operação moderna de crédito.",
+          "Simule e conduza seu financiamento imobili\u00e1rio com uma opera\u00e7\u00e3o moderna de cr\u00e9dito.",
       },
+      { property: "og:url", content: "https://www.souorbix.com.br/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@orbix" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: "https://www.souorbix.com.br/" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },

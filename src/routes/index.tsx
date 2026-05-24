@@ -31,18 +31,19 @@ import orbixLogoGold from "@/assets/orbix-logo-gold-transparent.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Orbix | Crédito imobiliário com inteligência operacional" },
+      { title: "Orbix | Cr\u00e9dito imobili\u00e1rio Caixa e Minha Casa Minha Vida" },
       {
         name: "description",
         content:
-          "A Orbix conduz crédito imobiliário com tecnologia, estratégia bancária e atendimento especializado para operações Caixa.",
+          "Cr\u00e9dito imobili\u00e1rio com a Orbix: simula\u00e7\u00e3o Caixa, Minha Casa Minha Vida, SBPE e acompanhamento da esteira at\u00e9 a aprova\u00e7\u00e3o.",
       },
-      { property: "og:title", content: "Orbix | Crédito imobiliário inteligente" },
+      { property: "og:title", content: "Orbix | Cr\u00e9dito imobili\u00e1rio Caixa" },
       {
         property: "og:description",
         content:
-          "Simule, organize documentos e conduza seu financiamento imobiliário com uma esteira moderna de crédito.",
+          "Simule, organize documentos e conduza seu financiamento imobili\u00e1rio Caixa com uma esteira moderna de cr\u00e9dito.",
       },
+      { property: "og:url", content: "https://www.souorbix.com.br/" },
       { property: "og:type", content: "website" },
       { property: "og:image", content: heroArchitecture },
     ],
