@@ -11,7 +11,6 @@ const links = [
   ["Método", "/#metodo"],
   ["Esteira", "/#esteira"],
   ["Caixa", "/#caixa"],
-  ["Presença", "/#presenca"],
   ["App", "/#app"],
   ["Consórcio", "/#consorcio"],
   ["Blog", "/blog"],
