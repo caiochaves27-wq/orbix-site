@@ -85,33 +85,37 @@ function OrbixSite() {
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-[92vh] overflow-hidden bg-navy-deep text-white">
+    <section
+      id="top"
+      className="relative min-h-[96svh] overflow-hidden bg-navy-deep text-white lg:min-h-[92vh]"
+    >
       <img
         src={heroArchitecture}
         alt="Prédio residencial moderno ao entardecer"
-        className="absolute inset-y-0 right-0 hidden h-full w-[56%] object-cover opacity-95 lg:block"
+        className="absolute inset-0 h-full w-full object-cover object-[62%_center] opacity-78 lg:inset-y-0 lg:left-auto lg:right-0 lg:w-[56%] lg:object-center lg:opacity-95"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--navy-deep)_0%,var(--navy)_44%,rgba(29,55,78,0.38)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,40,58,0.62)_0%,rgba(23,40,58,0.68)_32%,rgba(23,40,58,0.96)_86%)] lg:bg-[linear-gradient(90deg,var(--navy-deep)_0%,var(--navy)_44%,rgba(29,55,78,0.38)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,transparent_0%,var(--navy-deep)_100%)] lg:hidden" />
       <div className="absolute inset-y-0 right-0 hidden w-[58%] bg-[linear-gradient(90deg,var(--navy)_0%,rgba(29,55,78,0.45)_34%,rgba(29,55,78,0.10)_100%)] lg:block" />
-      <div className="absolute inset-0 grid-fine opacity-25 invert" />
+      <div className="absolute inset-0 grid-fine opacity-30 invert" />
 
-      <div className="relative mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-end px-5 pb-12 pt-32 sm:px-8 lg:pb-16">
+      <div className="relative mx-auto flex min-h-[96svh] max-w-7xl flex-col justify-end px-5 pb-10 pt-36 sm:px-8 lg:min-h-[92vh] lg:pb-16">
         <div className="max-w-5xl">
           <img
             src={orbixLogoGold}
             alt="Orbix Crédito Imobiliário"
-            className="mt-7 w-full max-w-[760px] rounded-sm"
+            className="w-full max-w-[520px] rounded-sm drop-shadow-[0_18px_46px_rgba(0,0,0,0.34)] sm:max-w-[680px] lg:max-w-[760px]"
           />
-          <p className="mt-7 max-w-3xl text-2xl leading-tight text-white sm:text-4xl lg:text-5xl">
+          <p className="mt-6 max-w-3xl font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:mt-7 lg:text-5xl">
             Crédito imobiliário com <span className="text-gold">presença,</span> estratégia e
             resultado.
           </p>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/72 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base font-semibold leading-relaxed text-white/82 sm:text-lg lg:mt-6 lg:text-white/72">
             Estrutura completa, atendimento consultivo e soluções inteligentes para realizar seu
             sonho, proteger seu investimento e avançar com segurança.
           </p>
 
-          <div className="mt-9 grid max-w-[620px] gap-3 sm:grid-cols-2">
+          <div className="mt-8 grid max-w-[620px] gap-3 sm:grid-cols-2 lg:mt-9">
             <a
               href="#simulador"
               className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-gold/70 px-6 py-3.5 text-center text-sm font-extrabold uppercase tracking-[0.12em] text-gold shadow-gold-glow transition hover:bg-gold hover:text-navy-deep"
