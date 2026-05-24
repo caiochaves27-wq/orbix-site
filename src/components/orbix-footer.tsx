@@ -57,6 +57,11 @@ export function OrbixFooter() {
               </a>
             </li>
             <li>
+              <a href="/vagas" className="hover:text-gold">
+                Vagas
+              </a>
+            </li>
+            <li>
               <a href="/contato" className="hover:text-gold">
                 Contato
               </a>

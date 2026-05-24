@@ -14,6 +14,7 @@ const links = [
   ["Caixa", "/#caixa"],
   ["App", "/#app"],
   ["Consórcio", "/#consorcio"],
+  ["Vagas", "/vagas"],
   ["FAQ/Blog", "/blog"],
   ["Contato", "/contato"],
 ];
