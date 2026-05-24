@@ -16,11 +16,11 @@ import { OrbixNav } from "@/components/orbix-nav";
 export const Route = createFileRoute("/vagas")({
   head: () => ({
     meta: [
-      { title: "Vagas Orbix | Trabalhe com crÃ©dito imobiliÃ¡rio" },
+      { title: "Vagas Orbix | Trabalhe com credito imobiliario" },
       {
         name: "description",
         content:
-          "Vagas abertas na Orbix para crÃ©dito imobiliÃ¡rio, atendimento, consultoria e administrativo.",
+          "Vagas abertas na Orbix para credito imobiliario, atendimento, consultoria e administrativo.",
       },
     ],
   }),
@@ -31,39 +31,49 @@ const RH_EMAIL = "rh@souorbix.com.br";
 
 const jobs = [
   {
-    title: "Analista de crÃ©dito imobiliÃ¡rio",
-    location: "RibeirÃ£o Preto/SP",
-    area: "CrÃ©dito",
+    title: "Analista de cr\u00e9dito imobili\u00e1rio",
+    location: "Ribeir\u00e3o Preto/SP",
+    area: "Cr\u00e9dito",
     type: "Presencial",
+    description:
+      "Para quem tem olhar anal\u00edtico, organiza documenta\u00e7\u00e3o com cuidado e gosta de conduzir propostas com precis\u00e3o.",
   },
   {
-    title: "Assistente de crÃ©dito imobiliÃ¡rio",
-    location: "RibeirÃ£o Preto/SP",
-    area: "CrÃ©dito",
+    title: "Assistente de cr\u00e9dito imobili\u00e1rio",
+    location: "Ribeir\u00e3o Preto/SP",
+    area: "Cr\u00e9dito",
     type: "Presencial",
+    description:
+      "Uma oportunidade para aprender a esteira imobili\u00e1ria de perto, apoiar clientes e manter cada etapa em movimento.",
   },
   {
-    title: "Consultor de crÃ©dito imobiliÃ¡rio",
-    location: "RibeirÃ£o Preto/SP",
+    title: "Consultor de cr\u00e9dito imobili\u00e1rio",
+    location: "Ribeir\u00e3o Preto/SP",
     area: "Comercial",
     type: "Presencial",
+    description:
+      "Para perfis comunicativos, consultivos e focados em transformar simula\u00e7\u00f5es em jornadas claras para o cliente.",
   },
   {
     title: "Assistente administrativo",
-    location: "RibeirÃ£o Preto/SP",
+    location: "Ribeir\u00e3o Preto/SP",
     area: "Administrativo",
     type: "Presencial",
+    description:
+      "Para quem gosta de rotina organizada, apoio operacional, controle de informa\u00e7\u00f5es e atendimento interno bem feito.",
   },
   {
-    title: "Analista de crÃ©dito imobiliÃ¡rio",
-    location: "SÃ£o Paulo/SP",
-    area: "CrÃ©dito",
+    title: "Analista de cr\u00e9dito imobili\u00e1rio",
+    location: "S\u00e3o Paulo/SP",
+    area: "Cr\u00e9dito",
     type: "Presencial",
+    description:
+      "Atua\u00e7\u00e3o pr\u00f3xima \u00e0 opera\u00e7\u00e3o paulista, com foco em an\u00e1lise, documenta\u00e7\u00e3o e acompanhamento de propostas.",
   },
 ];
 
 function CareersPage() {
-  const [selectedJob, setSelectedJob] = useState(jobs[0].title);
+  const [selectedJob, setSelectedJob] = useState(`${jobs[0].title} - ${jobs[0].location}`);
   const [fileName, setFileName] = useState("");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -76,7 +86,7 @@ function CareersPage() {
     const job = String(form.get("job") || selectedJob);
     const linkedin = String(form.get("linkedin") || "");
     const message = String(form.get("message") || "");
-    const resumeName = fileName || "CurrÃ­culo a anexar";
+    const resumeName = fileName || "Curr\u00edculo a anexar";
 
     const subject = encodeURIComponent(`Candidatura Orbix - ${job} - ${name}`);
     const body = encodeURIComponent(
@@ -88,13 +98,13 @@ function CareersPage() {
         `E-mail: ${email}`,
         `Cidade: ${city}`,
         `Vaga de interesse: ${job}`,
-        `LinkedIn/PortfÃ³lio: ${linkedin || "NÃ£o informado"}`,
-        `CurrÃ­culo selecionado: ${resumeName}`,
+        `LinkedIn/Portf\u00f3lio: ${linkedin || "N\u00e3o informado"}`,
+        `Curr\u00edculo selecionado: ${resumeName}`,
         "",
         "Mensagem:",
         message || "Sem mensagem adicional.",
         "",
-        "Anexo: incluir o currÃ­culo antes de enviar este e-mail.",
+        "Anexo: incluir o curr\u00edculo antes de enviar este e-mail.",
       ].join("\n"),
     );
 
@@ -110,11 +120,12 @@ function CareersPage() {
           <div className="lg:col-span-7">
             <div className="eyebrow">Carreiras Orbix</div>
             <h1 className="mt-3 max-w-4xl text-3xl sm:text-5xl">
-              Vagas para quem quer crescer no mercado imobiliÃ¡rio.
+              {"Vagas para quem quer crescer no mercado imobili\u00e1rio."}
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-steel sm:text-lg">
-              Buscamos pessoas organizadas, consultivas e orientadas a resultado para atuar com
-              crÃ©dito imobiliÃ¡rio, atendimento e operaÃ§Ã£o.
+              {
+                "Buscamos pessoas organizadas, consultivas e orientadas a resultado para atuar com cr\u00e9dito imobili\u00e1rio, atendimento e opera\u00e7\u00e3o."
+              }
             </p>
           </div>
           <div className="surface-card rounded-[1.5rem] p-5 shadow-premium lg:col-span-5">
@@ -123,7 +134,9 @@ function CareersPage() {
                 <Mail className="h-5 w-5" />
               </div>
               <div>
-                <div className="text-[11px] font-bold uppercase text-steel">Envio de currÃ­culo</div>
+                <div className="text-[11px] font-bold uppercase text-steel">
+                  {"Envio de curr\u00edculo"}
+                </div>
                 <a href={`mailto:${RH_EMAIL}`} className="font-display text-xl text-navy">
                   {RH_EMAIL}
                 </a>
@@ -137,13 +150,14 @@ function CareersPage() {
             <button
               key={`${job.title}-${job.location}`}
               type="button"
-              onClick={() => setSelectedJob(job.title)}
+              onClick={() => setSelectedJob(`${job.title} - ${job.location}`)}
               className="interactive-card surface-card rounded-[1.25rem] p-5 text-left"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold">
                 <BriefcaseBusiness className="h-5 w-5" />
               </div>
               <h2 className="mt-5 font-display text-lg text-ink">{job.title}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-steel">{job.description}</p>
               <div className="mt-4 space-y-2 text-sm font-semibold text-steel">
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4 text-gold" />
@@ -171,7 +185,7 @@ function CareersPage() {
                 <UserRound className="h-5 w-5" />
               </div>
               <div>
-                <div className="eyebrow">Envie seu currÃ­culo</div>
+                <div className="eyebrow">{"Envie seu curr\u00edculo"}</div>
                 <h2 className="font-display text-2xl text-ink">Candidatura</h2>
               </div>
             </div>
@@ -216,7 +230,7 @@ function CareersPage() {
                     name="city"
                     required
                     className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
-                    placeholder="RibeirÃ£o Preto/SP"
+                    placeholder="Ribeir\u00e3o Preto/SP"
                   />
                 </label>
               </div>
@@ -234,12 +248,12 @@ function CareersPage() {
                       {job.title} - {job.location}
                     </option>
                   ))}
-                  <option>Envie seu currÃ­culo para futuras oportunidades</option>
+                  <option>{"Envie seu curr\u00edculo para futuras oportunidades"}</option>
                 </select>
               </label>
 
               <label className="grid gap-2">
-                <span className="text-sm font-bold text-steel">LinkedIn ou portfÃ³lio</span>
+                <span className="text-sm font-bold text-steel">{"LinkedIn ou portf\u00f3lio"}</span>
                 <input
                   name="linkedin"
                   className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
@@ -248,11 +262,11 @@ function CareersPage() {
               </label>
 
               <label className="grid gap-2">
-                <span className="text-sm font-bold text-steel">CurrÃ­culo</span>
+                <span className="text-sm font-bold text-steel">{"Curr\u00edculo"}</span>
                 <span className="flex cursor-pointer items-center justify-between gap-3 rounded-2xl border border-dashed border-gold/45 bg-white px-4 py-4 text-sm font-bold text-navy transition hover:border-gold">
                   <span className="flex items-center gap-2">
                     <FileUp className="h-4 w-4 text-gold" />
-                    {fileName || "Anexar currÃ­culo em PDF, DOC ou DOCX"}
+                    {fileName || "Anexar curr\u00edculo em PDF, DOC ou DOCX"}
                   </span>
                   <ArrowRight className="h-4 w-4 text-gold" />
                   <input
@@ -271,7 +285,7 @@ function CareersPage() {
                   name="message"
                   rows={4}
                   className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
-                  placeholder="Conte brevemente sua experiÃªncia."
+                  placeholder="Conte brevemente sua experi\u00eancia."
                 />
               </label>
 
@@ -286,16 +300,27 @@ function CareersPage() {
 
           <aside className="rounded-[1.5rem] bg-navy p-5 text-white shadow-premium sm:p-7 lg:col-span-4">
             <div className="text-[11px] font-bold uppercase text-gold">Perfil Orbix</div>
-            <h2 className="mt-3 font-display text-2xl">OrganizaÃ§Ã£o, atendimento e ritmo.</h2>
+            <h2 className="mt-3 font-display text-2xl">
+              {"Organiza\u00e7\u00e3o, atendimento e ritmo."}
+            </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/68">
-              Valorizamos comunicaÃ§Ã£o clara, cuidado com documentos, leitura de cenÃ¡rio e postura
-              consultiva com clientes, parceiros e bancos.
+              {
+                "Valorizamos comunica\u00e7\u00e3o clara, cuidado com documentos, leitura de cen\u00e1rio e postura consultiva com clientes, parceiros e bancos."
+              }
             </p>
             <div className="mt-6 grid gap-2 text-sm font-semibold text-white/72">
-              <span className="rounded-full border border-white/10 px-3 py-2">CrÃ©dito imobiliÃ¡rio</span>
-              <span className="rounded-full border border-white/10 px-3 py-2">Atendimento consultivo</span>
-              <span className="rounded-full border border-white/10 px-3 py-2">Esteira operacional</span>
-              <span className="rounded-full border border-white/10 px-3 py-2">DocumentaÃ§Ã£o e prazos</span>
+              <span className="rounded-full border border-white/10 px-3 py-2">
+                {"Cr\u00e9dito imobili\u00e1rio"}
+              </span>
+              <span className="rounded-full border border-white/10 px-3 py-2">
+                Atendimento consultivo
+              </span>
+              <span className="rounded-full border border-white/10 px-3 py-2">
+                Esteira operacional
+              </span>
+              <span className="rounded-full border border-white/10 px-3 py-2">
+                {"Documenta\u00e7\u00e3o e prazos"}
+              </span>
             </div>
           </aside>
         </div>
