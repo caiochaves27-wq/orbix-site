@@ -116,7 +116,7 @@ function CareersPage() {
     <main className="min-h-screen bg-ice text-ink">
       <OrbixNav />
 
-      <section className="mx-auto max-w-7xl overflow-hidden px-4 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36">
+      <section className="mx-auto max-w-7xl overflow-hidden px-3 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <div className="eyebrow">Carreiras Orbix</div>
@@ -179,10 +179,10 @@ function CareersPage() {
           ))}
         </div>
 
-        <div className="mx-auto mt-10 grid w-full max-w-md gap-8 md:max-w-none lg:grid-cols-12">
+        <div className="mx-auto mt-10 grid w-full max-w-[calc(100vw-1.5rem)] gap-8 md:max-w-none lg:grid-cols-12">
           <form
             onSubmit={handleSubmit}
-            className="surface-card min-w-0 rounded-[1.25rem] p-4 shadow-premium sm:rounded-[1.5rem] sm:p-7 lg:col-span-8"
+            className="surface-card box-border w-full min-w-0 max-w-full overflow-hidden rounded-[1.25rem] p-3.5 shadow-premium sm:rounded-[1.5rem] sm:p-7 lg:col-span-8"
           >
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold">
@@ -201,7 +201,7 @@ function CareersPage() {
                   <input
                     name="name"
                     required
-                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
+                    className="box-border w-full min-w-0 max-w-full rounded-2xl border border-border bg-white px-3 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="Seu nome"
                   />
                 </label>
@@ -211,7 +211,7 @@ function CareersPage() {
                     name="phone"
                     type="tel"
                     required
-                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
+                    className="box-border w-full min-w-0 max-w-full rounded-2xl border border-border bg-white px-3 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="(00) 00000-0000"
                   />
                 </label>
@@ -224,7 +224,7 @@ function CareersPage() {
                     name="email"
                     type="email"
                     required
-                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
+                    className="box-border w-full min-w-0 max-w-full rounded-2xl border border-border bg-white px-3 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="voce@email.com"
                   />
                 </label>
@@ -233,7 +233,7 @@ function CareersPage() {
                   <input
                     name="city"
                     required
-                    className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
+                    className="box-border w-full min-w-0 max-w-full rounded-2xl border border-border bg-white px-3 py-3 outline-none focus:border-gold sm:px-4"
                     placeholder="São Paulo/SP"
                   />
                 </label>
@@ -245,7 +245,7 @@ function CareersPage() {
                   name="job"
                   value={selectedJob}
                   onChange={(event) => setSelectedJob(event.target.value)}
-                  className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
+                  className="box-border w-full min-w-0 max-w-full rounded-2xl border border-border bg-white px-3 py-3 outline-none focus:border-gold sm:px-4"
                 >
                   {jobs.map((job) => (
                     <option key={`${job.title}-select-${job.location}`}>
@@ -260,14 +260,14 @@ function CareersPage() {
                 <span className="text-sm font-bold text-steel">{"LinkedIn ou portf\u00f3lio"}</span>
                 <input
                   name="linkedin"
-                  className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
+                  className="box-border w-full min-w-0 max-w-full rounded-2xl border border-border bg-white px-3 py-3 outline-none focus:border-gold sm:px-4"
                   placeholder="https://..."
                 />
               </label>
 
               <label className="grid gap-2">
                 <span className="text-sm font-bold text-steel">{"Curr\u00edculo"}</span>
-                <span className="flex min-w-0 cursor-pointer items-center justify-between gap-3 rounded-2xl border border-dashed border-gold/45 bg-white px-3.5 py-4 text-sm font-bold text-navy transition hover:border-gold sm:px-4">
+                <span className="box-border flex w-full min-w-0 max-w-full cursor-pointer items-center justify-between gap-3 rounded-2xl border border-dashed border-gold/45 bg-white px-3 py-4 text-sm font-bold text-navy transition hover:border-gold sm:px-4">
                   <span className="flex min-w-0 items-center gap-2">
                     <FileUp className="h-4 w-4 text-gold" />
                     <span className="min-w-0 break-words">
@@ -290,21 +290,21 @@ function CareersPage() {
                 <textarea
                   name="message"
                   rows={4}
-                  className="min-w-0 rounded-2xl border border-border bg-white px-3.5 py-3 outline-none focus:border-gold sm:px-4"
+                  className="box-border w-full min-w-0 max-w-full rounded-2xl border border-border bg-white px-3 py-3 outline-none focus:border-gold sm:px-4"
                   placeholder="Conte brevemente sua experiência."
                 />
               </label>
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-bold text-navy-deep transition hover:bg-navy hover:text-white"
+                className="inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full bg-gold px-4 py-3.5 text-sm font-bold text-navy-deep transition hover:bg-navy hover:text-white sm:w-auto sm:px-6"
               >
                 Enviar candidatura <Send className="h-4 w-4" />
               </button>
             </div>
           </form>
 
-          <aside className="min-w-0 rounded-[1.25rem] bg-navy p-4 text-white shadow-premium sm:rounded-[1.5rem] sm:p-7 lg:col-span-4">
+          <aside className="box-border w-full min-w-0 max-w-full overflow-hidden rounded-[1.25rem] bg-navy p-3.5 text-white shadow-premium sm:rounded-[1.5rem] sm:p-7 lg:col-span-4">
             <div className="text-[11px] font-bold uppercase text-gold">Perfil Orbix</div>
             <h2 className="mt-3 font-display text-2xl">
               {"Organiza\u00e7\u00e3o, atendimento e ritmo."}
