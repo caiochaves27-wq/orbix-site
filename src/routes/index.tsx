@@ -236,7 +236,7 @@ function Simulator() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-45" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-gold" />
           </span>
-          Simulações recebidas diariamente pelo WhatsApp
+          Pessoas simulando caminhos para garantir seu imóvel
         </div>
 
         <div className="mt-12 grid overflow-hidden rounded-[2rem] border border-border bg-white shadow-premium lg:grid-cols-12">
