@@ -5,11 +5,9 @@ import {
   BadgeCheck,
   Banknote,
   Building2,
-  ChevronDown,
   CircleDollarSign,
   Clock3,
   FileCheck2,
-  Fingerprint,
   Gauge,
   Instagram,
   Landmark,
@@ -83,7 +81,6 @@ function OrbixSite() {
       <BrandFacade />
       <BrokerApp />
       <Consortium />
-      <FAQ />
       <FinalCTA />
       <Footer />
       <WhatsAppFloat />
@@ -138,64 +135,37 @@ function Hero() {
             </a>
           </div>
         </div>
-
-        <div className="mt-14 grid max-w-[760px] gap-3 sm:grid-cols-2">
-          <HeroSignal icon={<Gauge />} label="Atuação" value="Nível nacional" />
-          <HeroSignal
-            icon={<Fingerprint />}
-            label="Unidades"
-            value="Ribeirão Preto e São Paulo Capital"
-          />
-        </div>
       </div>
     </section>
   );
 }
 
-function HeroSignal({
-  icon,
-  label,
-  value,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-}) {
-  return (
-    <div className="flex min-h-[68px] w-full items-center rounded-full border border-gold/55 bg-white/8 px-4 py-3 shadow-quiet backdrop-blur-md">
-      <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/45 text-gold">
-          <span className="[&>svg]:h-4 [&>svg]:w-4">{icon}</span>
-        </div>
-        <div>
-          <div className="text-[10px] font-bold uppercase text-gold/80">{label}</div>
-          <div className="text-sm font-semibold text-white">{value}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function ProofBar() {
   const items = [
-    ["15+ anos", "de mercado imobiliário"],
-    ["Caixa", "crédito imobiliário em foco"],
-    ["MCMV", "enquadramento e documentação"],
-    ["SBPE", "simulação e condução"],
-    ["Brasil", "atuação em nível nacional"],
+    ["Crédito Caixa", "jornada organizada do primeiro contato à assinatura"],
+    ["Minha Casa Minha Vida", "leitura de renda, subsídio e enquadramento"],
+    ["SBPE", "simulações claras para imóveis e investimentos"],
+    ["Consórcio", "estratégia de lance e acompanhamento da contemplação"],
+    ["App Orbix", "monitoramento da proposta em tempo real"],
+    ["Atuação nacional", "matriz em Ribeirão Preto e unidade em São Paulo"],
   ];
   const tickerItems = [...items, ...items];
 
   return (
-    <section className="overflow-hidden border-y border-gold/20 bg-navy text-white">
-      <div className="orbix-marquee flex w-max gap-3 py-4">
+    <section className="overflow-hidden border-y border-gold/25 bg-navy-deep text-white">
+      <div className="orbix-marquee flex w-max gap-4 py-5">
         {tickerItems.map(([value, label], index) => (
           <div
             key={`${value}-${index}`}
-            className="flex min-w-[240px] items-center gap-4 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 sm:min-w-[320px]"
+            className="group flex min-w-[340px] items-center gap-5 rounded-full border border-gold/25 bg-white/[0.06] px-6 py-4 shadow-quiet backdrop-blur-md sm:min-w-[460px]"
           >
-            <div className="font-display text-2xl text-gold sm:text-3xl">{value}</div>
-            <div className="text-xs font-bold uppercase text-white/62">{label}</div>
+            <div className="h-2.5 w-2.5 shrink-0 rounded-full bg-gold shadow-gold-glow" />
+            <div>
+              <div className="font-display text-xl font-extrabold text-gold sm:text-2xl">
+                {value}
+              </div>
+              <div className="mt-1 text-xs font-semibold uppercase text-white/62">{label}</div>
+            </div>
           </div>
         ))}
       </div>
@@ -560,22 +530,6 @@ function Authority() {
             </div>
           ))}
         </div>
-
-        <div className="mt-5 grid gap-4 lg:grid-cols-3">
-          <div className="rounded-[1.35rem] border border-gold/25 bg-white p-5 shadow-quiet lg:col-span-2">
-            <div className="text-[11px] font-bold uppercase text-gold">Minha Casa Minha Vida</div>
-            <p className="mt-2 text-sm leading-relaxed text-steel">
-              Atendimento com leitura de renda, possibilidade de subsídio e orientação simples para
-              realizar o sonho do imóvel com segurança.
-            </p>
-          </div>
-          <div className="rounded-[1.35rem] border border-navy/10 bg-white p-5 shadow-quiet">
-            <div className="text-[11px] font-bold uppercase text-gold">Presença Orbix</div>
-            <p className="mt-2 text-sm leading-relaxed text-steel">
-              Tecnologia com rosto, voz e acompanhamento humano.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -856,85 +810,6 @@ function Consortium() {
         </div>
       </div>
     </section>
-  );
-}
-
-function FAQ() {
-  const items = [
-    {
-      question: "A Orbix aprova crédito?",
-      answer:
-        "Não. A aprovação é oficial da instituição financeira. A Orbix organiza a jornada para aumentar clareza e reduzir pendências.",
-    },
-    {
-      question: "A Orbix atende Minha Casa Minha Vida?",
-      answer:
-        "Sim. Ajudamos na leitura de renda, enquadramento, documentação e próximos passos do financiamento.",
-    },
-    {
-      question: "Clientes e parceiros conseguem acompanhar a operação?",
-      answer:
-        "Sim. A proposta é dar mais visibilidade à esteira, aos documentos e ao status do processo.",
-    },
-  ];
-
-  return (
-    <section id="faq" className="bg-ice py-20 sm:py-28">
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <SectionIntro
-          eyebrow="FAQ Orbix"
-          title={
-            <>
-              O essencial, sem <span className="text-gold">burocratês.</span>
-            </>
-          }
-          text="As dúvidas técnicas completas ficam no blog. Aqui está só o que ajuda a decidir o próximo passo."
-          align="center"
-        />
-
-        <div className="mt-12 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-white shadow-premium">
-          {items.map((item) => (
-            <FAQItem key={item.question} question={item.question} answer={item.answer} />
-          ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <a
-            href="/blog"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-5 py-3 text-sm font-bold text-navy transition hover:border-gold"
-          >
-            Ver FAQ completo no blog <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <button
-      type="button"
-      aria-expanded={open}
-      onClick={() => setOpen((value) => !value)}
-      className="block w-full px-6 py-5 text-left transition hover:bg-paper-2 sm:px-8"
-    >
-      <div className="flex items-center justify-between gap-6">
-        <span className="font-display text-xl text-ink">{question}</span>
-        <ChevronDown
-          className={`h-5 w-5 shrink-0 text-steel transition ${open ? "rotate-180 text-gold" : ""}`}
-        />
-      </div>
-      <div
-        className={`grid overflow-hidden text-sm leading-relaxed text-steel transition-all ${
-          open ? "mt-3 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="min-h-0">{answer}</div>
-      </div>
-    </button>
   );
 }
 
