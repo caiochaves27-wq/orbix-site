@@ -87,10 +87,10 @@ export function OrbixNav() {
           <button
             type="button"
             aria-label="Fechar menu"
-            className="absolute inset-0 bg-navy-deep/40 backdrop-blur-[2px]"
+            className="absolute inset-0 bg-navy-deep/20"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <aside className="relative ml-3 mt-3 w-[min(86vw,330px)] rounded-[1.5rem] border border-gold/25 bg-navy-deep/98 px-4 py-4 text-white shadow-premium">
+          <aside className="relative ml-3 mt-3 max-h-[calc(100svh-1.5rem)] w-[min(72vw,280px)] overflow-y-auto rounded-[1.25rem] border border-gold/25 bg-navy-deep/98 px-3.5 py-3.5 text-white shadow-premium">
             <div className="flex items-center justify-between gap-4">
               <a
                 href="/#top"
@@ -98,43 +98,43 @@ export function OrbixNav() {
                 className="flex items-center gap-2.5"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <img src={orbixEmblemGold} alt="" className="h-8 w-8 object-contain" />
-                <span className="text-xl font-extrabold tracking-[0.18em] text-gold">ORBIX</span>
+                <img src={orbixEmblemGold} alt="" className="h-7 w-7 object-contain" />
+                <span className="text-lg font-extrabold tracking-[0.18em] text-gold">ORBIX</span>
               </a>
               <button
                 type="button"
                 aria-label="Fechar menu"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-gold hover:text-gold"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-gold hover:text-gold"
               >
                 <X className="h-4 w-4" />
               </button>
             </div>
 
-            <nav className="mt-5 grid grid-cols-2 gap-2 text-sm font-bold">
+            <nav className="mt-4 grid gap-1.5 text-sm font-bold">
               {links.map(([label, href]) => (
                 <a
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2.5 text-center text-white/82 transition hover:border-gold/55 hover:text-gold"
+                  className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-left text-white/82 transition hover:border-gold/55 hover:text-gold"
                 >
                   {label}
                 </a>
               ))}
             </nav>
 
-            <div className="mt-5 grid gap-2">
+            <div className="mt-4 grid gap-2">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/65 px-4 py-2.5 text-xs font-extrabold uppercase tracking-[0.1em] text-gold transition hover:bg-gold hover:text-navy-deep"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/65 px-3 py-2 text-[11px] font-extrabold uppercase tracking-[0.1em] text-gold transition hover:bg-gold hover:text-navy-deep"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
               </a>
-              <div className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/35 bg-white/95 px-3 py-1.5 text-[9px] font-bold uppercase text-navy">
+              <div className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/35 bg-white/95 px-2.5 py-1.5 text-[8px] font-bold uppercase text-navy">
                 <BadgeCheck className="h-3 w-3 text-gold" />
                 <span>Autorizado</span>
                 <span className="h-4 w-px bg-navy/15" />
