@@ -61,7 +61,7 @@ const money = (value: number) =>
   });
 
 type Mode = "income" | "property";
-type Product = "sbpe" | "mcmv";
+type Product = "mcmv" | "sbpe";
 
 function OrbixSite() {
   return (
@@ -181,7 +181,7 @@ function pricePV(payment: number, annualRate: number, months: number) {
 }
 
 function Simulator() {
-  const [product, setProduct] = useState<Product>("sbpe");
+  const [product, setProduct] = useState<Product>("mcmv");
   const [mode, setMode] = useState<Mode>("income");
   const [income, setIncome] = useState(8000);
   const [propertyValue, setPropertyValue] = useState(420000);
@@ -267,7 +267,7 @@ function Simulator() {
 
           <div className="p-6 sm:p-8 lg:col-span-7">
             <div className="flex flex-wrap gap-2">
-              {(["sbpe", "mcmv"] as Product[]).map((item) => (
+              {(["mcmv", "sbpe"] as Product[]).map((item) => (
                 <button
                   key={item}
                   type="button"
@@ -564,7 +564,7 @@ function Operation() {
   }, [steps.length]);
 
   return (
-    <section className="overflow-hidden bg-navy-deep py-20 text-white sm:py-28">
+    <section id="esteira" className="overflow-hidden bg-navy-deep py-20 text-white sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -578,7 +578,13 @@ function Operation() {
               cada etapa: simulação, análise de crédito, avaliação do imóvel, contrato e registro.
             </p>
           </div>
-          <img src={orbixLogoGold} alt="Orbix" className="h-14 w-fit" />
+          <div className="shrink-0 rounded-2xl border border-gold/30 bg-white/[0.04] px-5 py-4 shadow-gold-glow sm:px-6">
+            <img
+              src={orbixLogoGold}
+              alt="Orbix"
+              className="h-auto w-[220px] max-w-full object-contain sm:w-[280px] lg:w-[320px]"
+            />
+          </div>
         </div>
 
         <div className="mt-12 grid gap-4 lg:grid-cols-4">
