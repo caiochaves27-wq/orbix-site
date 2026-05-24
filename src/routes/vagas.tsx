@@ -234,7 +234,7 @@ function CareersPage() {
                     name="city"
                     required
                     className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
-                    placeholder="Ribeir\u00e3o Preto/SP"
+                    placeholder="São Paulo/SP"
                   />
                 </label>
               </div>
@@ -289,7 +289,7 @@ function CareersPage() {
                   name="message"
                   rows={4}
                   className="rounded-2xl border border-border bg-white px-4 py-3 outline-none focus:border-gold"
-                  placeholder="Conte brevemente sua experi\u00eancia."
+                  placeholder="Conte brevemente sua experiência."
                 />
               </label>
 
@@ -309,7 +309,7 @@ function CareersPage() {
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/68">
               {
-                "Valorizamos comunica\u00e7\u00e3o clara, cuidado com documentos, leitura de cen\u00e1rio e postura consultiva com clientes, parceiros e bancos."
+                "Valorizamos comunicação clara, cuidado com documentos, leitura de cenário e conhecimento da esteira da Caixa Econômica Federal."
               }
             </p>
             <div className="mt-6 grid gap-2 text-sm font-semibold text-white/72">
