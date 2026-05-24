@@ -167,28 +167,28 @@ function BlogPage() {
     <main className="min-h-screen bg-ice text-ink">
       <OrbixNav />
 
-      <section className="mx-auto max-w-7xl px-5 pb-16 pt-32 sm:px-8 sm:pb-24 sm:pt-40">
+      <section className="mx-auto max-w-7xl px-5 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36">
         <div className="max-w-3xl">
           <div className="eyebrow">Blog/FAQ Orbix</div>
-          <h1 className="mt-3 text-4xl sm:text-6xl">
+          <h1 className="mt-3 text-3xl sm:text-5xl">
             Conteúdo para decidir melhor e financiar com mais clareza.
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-steel">
+          <p className="mt-5 text-base leading-relaxed text-steel sm:text-lg">
             Guias práticos e respostas objetivas para compradores, investidores, imobiliárias,
             construtoras e parceiros.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           {posts.map((post) => (
             <article
               key={post.title}
-              className="interactive-card surface-card rounded-[1.5rem] p-6"
+              className="interactive-card surface-card rounded-[1.25rem] p-5"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-navy text-white">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-white">
                 <span className="[&>svg]:h-5 [&>svg]:w-5">{post.icon}</span>
               </div>
-              <h2 className="mt-6 font-display text-2xl">{post.title}</h2>
+              <h2 className="mt-5 font-display text-xl">{post.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-steel">{post.summary}</p>
               <ul className="mt-5 space-y-2 text-sm leading-relaxed text-steel">
                 {post.points.map((point) => (
@@ -202,11 +202,11 @@ function BlogPage() {
           ))}
         </div>
 
-        <section className="mt-16 rounded-[2rem] bg-navy p-6 text-white shadow-premium sm:p-8">
+        <section className="mt-14 rounded-[1.5rem] bg-navy p-5 text-white shadow-premium sm:p-7">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <div className="text-[11px] font-bold uppercase text-gold">FAQ Orbix</div>
-              <h2 className="mt-2 font-display text-3xl">Perguntas frequentes</h2>
+              <h2 className="mt-2 font-display text-2xl">Perguntas frequentes</h2>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-white/60">
               Respostas diretas para as dúvidas que mais aparecem antes de simular, financiar ou
@@ -214,13 +214,13 @@ function BlogPage() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <div className="mt-7 grid gap-4 lg:grid-cols-2">
             {faq.map((section) => (
               <div
                 key={section.group}
-                className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5"
+                className="rounded-[1.25rem] border border-white/10 bg-white/[0.06] p-4"
               >
-                <h3 className="font-display text-2xl text-gold">{section.group}</h3>
+                <h3 className="font-display text-xl text-gold">{section.group}</h3>
                 <div className="mt-4 space-y-3">
                   {section.items.map(([question, answer]) => (
                     <div key={question} className="rounded-2xl bg-white/[0.06] p-4">

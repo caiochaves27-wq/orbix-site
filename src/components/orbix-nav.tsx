@@ -23,7 +23,7 @@ export function OrbixNav() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4 sm:px-6">
-      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-navy/94 px-4 py-3 shadow-premium backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-navy/94 px-3.5 py-2.5 shadow-premium backdrop-blur-xl sm:px-4">
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -38,15 +38,15 @@ export function OrbixNav() {
             <img
               src={orbixEmblemGold}
               alt=""
-              className="h-9 w-9 object-contain sm:h-10 sm:w-10"
+              className="h-8 w-8 object-contain sm:h-9 sm:w-9"
             />
-            <span className="text-xl font-extrabold tracking-[0.18em] text-gold sm:text-2xl">
+            <span className="text-lg font-extrabold tracking-[0.18em] text-gold sm:text-xl">
               ORBIX
             </span>
           </a>
         </div>
 
-        <nav className="hidden items-center gap-4 text-xs font-semibold text-white/70 xl:flex">
+        <nav className="hidden items-center gap-3.5 text-[11px] font-semibold text-white/70 xl:flex">
           {links.map(([label, href]) => (
             <a key={href} href={href} className="transition hover:text-gold">
               {label}
@@ -59,14 +59,14 @@ export function OrbixNav() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-semibold text-white transition hover:border-gold hover:text-gold sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/8 px-3.5 py-2 text-sm font-semibold text-white transition hover:border-gold hover:text-gold sm:inline-flex"
           >
             <MessageCircle className="h-4 w-4" />
             WhatsApp
           </a>
           <a
             href="/#simulador"
-            className="inline-flex items-center gap-2 rounded-full border border-gold/70 px-4 py-2 text-sm font-extrabold uppercase tracking-[0.1em] text-gold shadow-quiet transition hover:bg-gold hover:text-navy-deep"
+            className="inline-flex items-center gap-2 rounded-full border border-gold/70 px-3.5 py-2 text-sm font-extrabold uppercase tracking-[0.1em] text-gold shadow-quiet transition hover:bg-gold hover:text-navy-deep"
           >
             Simular <ArrowRight className="h-4 w-4" />
           </a>

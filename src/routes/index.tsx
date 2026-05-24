@@ -106,7 +106,7 @@ function Hero() {
             alt="Orbix Crédito Imobiliário"
             className="w-full max-w-[520px] rounded-sm drop-shadow-[0_18px_46px_rgba(0,0,0,0.34)] sm:max-w-[680px] lg:max-w-[760px]"
           />
-          <p className="mt-6 max-w-3xl font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:mt-7 lg:text-5xl">
+          <p className="mt-6 max-w-3xl font-display text-2xl font-extrabold leading-tight text-white sm:text-3xl lg:mt-7 lg:text-4xl">
             Crédito imobiliário com <span className="text-gold">presença,</span> estratégia e
             resultado.
           </p>
@@ -219,7 +219,7 @@ function Simulator() {
   }, [annualRate, income, mode, propertyValue, term]);
 
   return (
-    <section id="simulador" className="relative overflow-hidden bg-paper py-20 sm:py-28">
+    <section id="simulador" className="relative overflow-hidden bg-paper py-16 sm:py-24">
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-paper to-transparent" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionIntro
@@ -239,7 +239,7 @@ function Simulator() {
           Simulação disponível agora
         </div>
 
-        <div className="mt-12 grid overflow-hidden rounded-[2rem] border border-border bg-white shadow-premium lg:grid-cols-12">
+        <div className="mt-10 grid overflow-hidden rounded-[1.5rem] border border-border bg-white shadow-premium lg:grid-cols-12">
           <div className="bg-navy-aurora p-6 text-white sm:p-8 lg:col-span-5">
             <div className="flex items-center justify-between gap-4">
               <img src={orbixLogoGold} alt="Orbix" className="h-12 w-auto" />
@@ -251,7 +251,7 @@ function Simulator() {
             <div className="mt-10 text-[11px] font-bold uppercase text-white/50">
               Resultado Orbix
             </div>
-            <div className="mt-3 font-display text-5xl leading-none text-grad-gold sm:text-6xl">
+            <div className="mt-3 font-display text-4xl leading-none text-grad-gold sm:text-5xl">
               {mode === "income" ? money(result.financed) : money(result.requiredIncome)}
             </div>
             <div className="mt-3 text-sm font-medium text-white/72">
@@ -501,7 +501,7 @@ function Authority() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <div className="eyebrow">Quem somos</div>
-            <h2 className="mt-3 max-w-2xl text-4xl text-ink sm:text-6xl">
+            <h2 className="mt-3 max-w-2xl text-3xl text-ink sm:text-5xl">
               Crédito com <span className="text-gold">método</span>, tecnologia e acompanhamento.
             </h2>
           </div>
@@ -575,12 +575,12 @@ function Operation() {
   }, [steps.length]);
 
   return (
-    <section id="esteira" className="overflow-hidden bg-navy-deep py-20 text-white sm:py-28">
+    <section id="esteira" className="overflow-hidden bg-navy-deep py-16 text-white sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="text-[11px] font-bold uppercase text-gold">Esteira de crédito</div>
-            <h2 className="mt-3 max-w-3xl text-4xl sm:text-6xl">
+            <h2 className="mt-3 max-w-3xl text-3xl sm:text-5xl">
               Passo a passo para comprar seu imóvel com{" "}
               <span className="text-gold">mais clareza.</span>
             </h2>
@@ -645,15 +645,15 @@ function CaixaPresence() {
   return (
     <section
       id="caixa"
-      className="bg-[linear-gradient(180deg,var(--paper-2)_0%,var(--paper)_48%,var(--paper-2)_100%)] py-20 sm:py-28"
+      className="bg-[linear-gradient(180deg,var(--paper-2)_0%,var(--paper)_48%,var(--paper-2)_100%)] py-16 sm:py-24"
     >
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-5">
           <div className="overflow-hidden rounded-[2rem] border border-border bg-white shadow-premium">
             <img
               src={movixWomanPhone}
               alt="Atendimento digital Orbix"
-              className="aspect-[16/10] w-full object-cover"
+              className="aspect-[16/9] w-full object-cover"
             />
             <div className="bg-navy p-5 text-white sm:p-6">
               <div className="flex items-center justify-between gap-4">
@@ -673,7 +673,7 @@ function CaixaPresence() {
 
         <div className="lg:col-span-7">
           <div className="eyebrow">Caixa + Orbix</div>
-          <h2 className="mt-3 text-4xl text-ink sm:text-6xl">
+          <h2 className="mt-3 text-3xl text-ink sm:text-5xl">
             Mais <span className="text-gold">crédito aprovado.</span> Mais segurança para avançar.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-steel">
@@ -719,11 +719,11 @@ function TrustItem({ icon, text }: { icon: React.ReactNode; text: string }) {
 
 function BrokerApp() {
   return (
-    <section id="app" className="overflow-hidden bg-navy-deep py-20 text-white sm:py-28">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
+    <section id="app" className="overflow-hidden bg-navy-deep py-16 text-white sm:py-24">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-5">
           <div className="eyebrow text-gold">App de acompanhamento</div>
-          <h2 className="mt-3 text-4xl sm:text-6xl">
+          <h2 className="mt-3 text-3xl sm:text-5xl">
             Esteira <span className="text-gold">visível</span> para parceiros.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-white/68">
@@ -776,11 +776,11 @@ function Consortium() {
   ];
 
   return (
-    <section id="consorcio" className="bg-ice py-20 sm:py-28">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
+    <section id="consorcio" className="bg-ice py-16 sm:py-24">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-6">
           <div className="eyebrow">Consórcio imobiliário</div>
-          <h2 className="mt-3 text-4xl text-ink sm:text-6xl">
+          <h2 className="mt-3 text-3xl text-ink sm:text-5xl">
             Uma <span className="text-gold">rota patrimonial</span> para comprar com planejamento.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-steel">
@@ -827,16 +827,16 @@ function Consortium() {
 
 function FinalCTA() {
   return (
-    <section className="bg-navy-deep px-5 py-16 text-white sm:px-8 sm:py-20">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] p-8 shadow-premium sm:p-12">
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+    <section className="bg-navy-deep px-5 py-14 text-white sm:px-8 sm:py-20">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] p-6 shadow-premium sm:p-10">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-8">
             <img
               src={orbixLogoGold}
               alt="Orbix"
               className="h-auto w-[190px] max-w-full object-contain sm:w-[240px]"
             />
-            <h2 className="mt-8 max-w-4xl text-4xl sm:text-6xl">
+            <h2 className="mt-7 max-w-4xl text-3xl sm:text-5xl">
               Transforme seu plano em <span className="text-gold">aprovação</span> com uma esteira
               completa de crédito.
             </h2>
@@ -899,7 +899,7 @@ function SectionIntro({
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       <div className="eyebrow">{eyebrow}</div>
-      <h2 className="mt-3 text-4xl text-ink sm:text-6xl">{title}</h2>
+      <h2 className="mt-3 text-3xl text-ink sm:text-5xl">{title}</h2>
       <p className="mt-5 text-lg leading-relaxed text-steel">{text}</p>
     </div>
   );

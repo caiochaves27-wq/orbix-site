@@ -52,36 +52,36 @@ function ContactPage() {
     <main className="min-h-screen bg-ice text-ink">
       <OrbixNav />
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-5 pb-16 pt-32 sm:px-8 sm:pb-24 sm:pt-40 lg:grid-cols-12">
+      <section className="mx-auto grid max-w-7xl gap-8 px-5 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <div className="eyebrow">Contato Orbix</div>
-          <h1 className="mt-3 text-4xl sm:text-6xl">Vamos entender sua operação.</h1>
-          <p className="mt-5 text-lg leading-relaxed text-steel">
+          <h1 className="mt-3 text-3xl sm:text-5xl">Vamos entender sua operação.</h1>
+          <p className="mt-5 text-base leading-relaxed text-steel sm:text-lg">
             Comprador, investidor, imobiliária ou construtora: fale com a Orbix para organizar sua
             rota de crédito e avançar com mais segurança.
           </p>
 
           <div className="mt-7 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-gold/25 bg-white p-4 shadow-quiet">
+            <div className="rounded-xl border border-gold/25 bg-white p-3.5 shadow-quiet">
               <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-gold">
                 <MapPin className="h-4 w-4" />
                 Matriz
               </div>
-              <div className="mt-1 font-display text-xl text-navy">Ribeirão Preto/SP</div>
+              <div className="mt-1 font-display text-lg text-navy">Ribeirão Preto/SP</div>
             </div>
-            <div className="rounded-2xl border border-gold/25 bg-white p-4 shadow-quiet">
+            <div className="rounded-xl border border-gold/25 bg-white p-3.5 shadow-quiet">
               <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-gold">
                 <Building2 className="h-4 w-4" />
                 Filial
               </div>
-              <div className="mt-1 font-display text-xl text-navy">São Paulo/SP</div>
+              <div className="mt-1 font-display text-lg text-navy">São Paulo/SP</div>
             </div>
-            <div className="rounded-2xl border border-gold/25 bg-white p-4 shadow-quiet">
+            <div className="rounded-xl border border-gold/25 bg-white p-3.5 shadow-quiet">
               <div className="flex items-center gap-2 text-[11px] font-bold uppercase text-gold">
                 <MapPin className="h-4 w-4" />
                 Atuação
               </div>
-              <div className="mt-1 font-display text-xl text-navy">Nível nacional</div>
+              <div className="mt-1 font-display text-lg text-navy">Nível nacional</div>
             </div>
           </div>
 
@@ -113,7 +113,7 @@ function ContactPage() {
 
         <form
           onSubmit={handleSubmit}
-          className="surface-card rounded-[2rem] p-6 shadow-premium sm:p-8 lg:col-span-7"
+          className="surface-card rounded-[1.5rem] p-5 shadow-premium sm:p-7 lg:col-span-7"
         >
           <div className="grid gap-5">
             <label className="grid gap-2">
