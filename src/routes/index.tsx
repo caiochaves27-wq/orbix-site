@@ -231,6 +231,13 @@ function Simulator() {
           }
           text="O simulador é só o começo da jornada. A Orbix transforma a estimativa em uma conversa consultiva sobre renda, modalidade, documentos, enquadramento Caixa, Minha Casa Minha Vida e SBPE."
         />
+        <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase text-navy shadow-quiet">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-45" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-gold" />
+          </span>
+          Alta procura no simulador
+        </div>
 
         <div className="mt-12 grid overflow-hidden rounded-[2rem] border border-border bg-white shadow-premium lg:grid-cols-12">
           <div className="bg-navy-aurora p-6 text-white sm:p-8 lg:col-span-5">
@@ -824,7 +831,11 @@ function FinalCTA() {
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.10),rgba(255,255,255,0.03))] p-8 shadow-premium sm:p-12">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-8">
-            <img src={orbixLogoGold} alt="Orbix" className="h-14 w-fit" />
+            <img
+              src={orbixLogoGold}
+              alt="Orbix"
+              className="h-auto w-[190px] max-w-full object-contain sm:w-[240px]"
+            />
             <h2 className="mt-8 max-w-4xl text-4xl sm:text-6xl">
               Transforme seu plano em <span className="text-gold">aprovação</span> com uma esteira
               completa de crédito.
