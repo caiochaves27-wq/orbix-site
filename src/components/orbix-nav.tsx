@@ -9,11 +9,8 @@ const WHATSAPP_URL =
 const links = [
   ["Home", "/#top"],
   ["Simulador", "/#simulador"],
-  ["Método", "/#metodo"],
   ["Esteira", "/#esteira"],
-  ["Caixa", "/#caixa"],
   ["App", "/#app"],
-  ["Consórcio", "/#consorcio"],
   ["FAQ/Blog", "/blog"],
   ["Vagas", "/vagas"],
   ["Contato", "/contato"],
