@@ -233,10 +233,10 @@ function Simulator() {
         />
         <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase text-navy shadow-quiet">
           <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-45" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-gold" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-45" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
           </span>
-          Pessoas simulando caminhos para garantir seu imóvel
+          Simulação disponível agora
         </div>
 
         <div className="mt-12 grid overflow-hidden rounded-[2rem] border border-border bg-white shadow-premium lg:grid-cols-12">
